@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(#30142b, #2772a1);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #4a4040;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+.nav-left img {
+height: 50px; /* Adjust the height as needed */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    margin-right: 10px;
+}
+
+.nav-icons i {
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: calc(50% - 20px); /* 20px for the gap; 50% to show 2 products per line */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.item-description {
+    flex: 0 0 60%;
+}
+
+.item-description h2 {
+    margin-bottom: 10px;
+}
+
+.item-description p {
+    margin-bottom: 5px;
+}
+
+#carousel-container {
+width: 70%;
+margin: auto;
+overflow: hidden;
+position: relative;
+background-color: #333; /* Add your preferred background color */
+border-radius: 10px; /* Add border-radius for a rounded look */
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a box shadow for depth */
+}
+
+#carousel-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 0 0 33.333%; /* Each item takes up 33.333% of the container */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150px; /* Maintain aspect ratio */
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1); /* Apply scale effect on hover */
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+/*pop up */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .popup-content {
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .skip {
+        display: block;
+        color: #555;
+        margin-top: 10px;
+        cursor: pointer;
+    }
